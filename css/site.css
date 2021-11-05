@@ -1,8 +1,9 @@
 :root {
-    --primary-color: #009ee0;
-    --secondary-color: #ff993b;
+    --primary-color: #2B2D42;
+    --secondary-color: #EF233C;
     --pink-color: #dd82af;
-    --lightBlue-color: ;
+    --lightBlue-color: #8D99AE;
+    --header-color: #009ee0;
 }
 
 .odd {
@@ -14,10 +15,7 @@
     font-size: large;
 }
 
-body {
-    color: var(--pink-color);
-    
-}
+
 
 .logo {
     color: purple;
@@ -29,12 +27,16 @@ nav{
 }
 
 
-
-.container-fluid {
-    margin-bottom: -45;
+.container {
+     margin-top: 70px !important;
 }
 
 
+form {
+    background-color: #e7e6e8;
+    color: black;
+    padding: 10px;
+}
 
 footer{
     background-color: var(--primary-color);
@@ -66,7 +68,7 @@ footer {
 
 
 footer .social>a{
-    color: var(--white-color);
+    color: white;
     opacity: 0.75;
 }
 
@@ -76,9 +78,24 @@ footer .social>a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--primary-color);
+    color: var(--header-color);
 }
 
+.h4-1 {
+    font-size: 30px;
+}
+
+.h4-2 {
+    font-size: 20px;
+    color: black;
+    font-weight:400;
+}
+
+.mp {
+    font-size: 40px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
 main>.container {
     padding: 60px 15px 0;
     margin-bottom: 5rem;

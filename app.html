@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>Inverse: A Coding Project by Austin Bruso.</title>
+    <title>Goliath Finance: A Coding Project by Austin Bruso.</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,7 +23,7 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top ">
     <div class="container-fluid ">
         <a class="navbar-brand d-flex align-items-center" href="index.html"><img src="img/Inverse (500 x 500 px).svg" height="150" width="150" alt="Reaper Logo" class="">
-            Inverse</a>
+            Goliath Finance</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,44 +53,97 @@
 <!-- Nav Section -->
 
 <!-- Main Section -->
-    <main class="flex-shrink-0 mt-5">
-        <div class="container mt-5 pt-3">
-            <div class="row row-cols-1 rol-cols-lg-2">
-                <div class="col-lg-4 col border-end border-2">
-                    <h1 class="display-4 fw-bold">Inverse: Your Message in Reverse.  </h1>
-                    <h4  class="lead">
-                        A coding exercise that inverts text. 
-                    </h4>
-                    <h2 class="mt-5 border-bottom border-2">Instructions</h2>
-                    <p>Enter a starting value and a ending value. Press the button and the values will appear. Display even numbers in Bold.</p>
-                </div>
-                <div class="col-lg-8 col">
-                    <div>
-                        <h5>Enter Values</h5>
-                        <form class="row gy-2 gx-3">
-                             <div class="col">
-                                <input type="number" id="startValue" class="form-control" placeholder="Start Value" value="0" aria-label="Start Value">
-                             </div>
-                             <div class="col">
-                                <input type="number" id="endValue" class="form-control" placeholder="End Value" value="100" aria-label="End Value">
-                             </div>
-                             <div class="col-12 d-flex justify-content-end">
-                                 <button id="btnSubmit" type="button" class="btn btn-dark btn-lg">Zero to 100</button>
-                             </div>
-                        </form>
-                        <h2 class="border-bottom border-2 ">Results</h2>
-                        <div class="table-responsive">
-                            <table class="table table-striped table-sm">
-                                <tbody id="results">
-                                    <!-- Results Go Here -->
-                                </tbody>
-                            </table>
+    <main class="flex-shrink-0">
+        <div class="container">
+            <h4 class="h4-1">Loan Calculator</h4>
+            <div class="row">
+                <div class="col-lg-6">
+                    <form>
+                        <div class="form-group pb-3 ">
+                          <label class="labels" for="loanAmount">Loan Amount</label>
+                          <input type="number" class="form-control" id="loanAmount" value="" aria-describedby="Loan Amount" >
                         </div>
+                        <div class="form-group pb-3 ">
+                          <label for="termLength">Term (Months)</label>
+                          <input type="number" class="form-control" value="" id="termLength" aria-describedby="Term in Months">
+                        </div>
+                        <div class="form-group pb-3">
+                          <label for="interestRate">Interest Rate</label>
+                          <input type="number" class="form-control" value="" id="interestRate" aria-describedby="Interest Rate">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Calculate</button>
+                      </form>
+                    </div>
+                <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h4 class="h4-2 d-flex justify-content-center">Your Monthly Payments</h4>
+                            </div>
+                            <div class="col-lg-12 mp">
+                                <span id="monthlyPayment" class="d-flex justify-content-center">$365.53</span>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="d-flex justify-content-start">Total Principal</p>
+                            </div>
+                            
+                            <div class="col">
+                                <span id="totalPrincipal" class="d-flex justify-content-start"></span>
+                            </div>
+                
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="d-flex justify-content-start">Total Interest</p>
+                            </div>
+                            
+                            <div class="col">
+                                <span id="totalInterest" class="d-flex justify-content-start"></span>
+                            </div>
+                
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="d-flex justify-content-start">Total Cost</p>
+                            </div>
+                            
+                            <div class="col">
+                                <span id="totalCost" class="d-flex justify-content-start"></span>
+                            </div>
+                
+                        </div>
+
+                        </div>
+                      </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
+
+    <table id="tblCustomers" class="invisible"; cellpadding="0" cellspacing="0" >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Country</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><input type="text" id="txtName" /></td>
+                <td><input type="text" id="txtCountry" /></td>
+                <td><input type="button" onclick="Add()" value="Add" /></td>
+            </tr>
+        </tfoot>
+    </table>
+
+
     <!-- Footer -->
     <footer class="footer mt-auto sticky-footer">
         <div class="container-fluid">
